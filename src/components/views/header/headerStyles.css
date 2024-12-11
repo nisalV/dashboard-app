@@ -1,0 +1,8 @@
+#header-container {
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: 1px solid #E6E8EC;
+}

@@ -1,0 +1,5 @@
+.svg-icon {
+    display: flex;
+    align-items: center;
+    transition: width 300ms ease;
+}
