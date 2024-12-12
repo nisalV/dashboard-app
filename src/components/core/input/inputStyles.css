@@ -1,25 +1,25 @@
 #input-common-container {
-    display: flex;
-    align-items: center;
-    padding: 0 12px 0 12px;
-    width: 222px;
-    height: 48px;
-    border: 0px;
-    border-radius: 8px;
-    background-color: #F4F5F6;
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 12px;
+  width: 222px;
+  height: 48px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #f4f5f6;
 }
 
 #input-common {
-    outline: none;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border: 0px;
-    font-size: 12px;
-    color: #353945 !important;
-    background-color: #F4F5F6;
+  outline: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  font-size: 12px;
+  color: #353945 !important;
+  background-color: #f4f5f6;
 }
 
 #input-common::placeholder {
-    color: #B1B5C3;
-  }
+  color: #b1b5c3;
+}

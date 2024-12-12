@@ -63,7 +63,7 @@ export const Header = () => {
         icon="Bell"
         style={styles.notificationButton}
         onClick={() => {}}
-      />  
+      />
       <ButtonImage
         src={profileImage}
         style={styles.avatar}

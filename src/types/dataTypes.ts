@@ -6,22 +6,22 @@ export enum Status {
 }
 
 export enum ButtonTypes {
-    SUMBMIT = 'submit',
-    RESET = 'reset',
-    BUTTON = 'button',
+  SUMBMIT = 'submit',
+  RESET = 'reset',
+  BUTTON = 'button',
 }
 
 export enum TextSizes {
-    EXTRA_SMALL = 'extraSmall',
-    SMALL = 'small',
-    SMALL_SEMI_BOLD = 'smallSemiBold',
-    SMALL_BOLD = 'smallBold',
-    MEDIUM = 'medium',
-    MEDIUM_BOLD = 'mediumBold',
-    LARGE = 'large',
-    LARGE_BOLD = 'largeBold',
-    EXTRA_LARGE_BOLD = 'extraLargeBold',
-  }
+  EXTRA_SMALL = 'extraSmall',
+  SMALL = 'small',
+  SMALL_SEMI_BOLD = 'smallSemiBold',
+  SMALL_BOLD = 'smallBold',
+  MEDIUM = 'medium',
+  MEDIUM_BOLD = 'mediumBold',
+  LARGE = 'large',
+  LARGE_BOLD = 'largeBold',
+  EXTRA_LARGE_BOLD = 'extraLargeBold',
+}
 
 export type Task = {
   id: string

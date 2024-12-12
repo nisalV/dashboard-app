@@ -45,11 +45,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div id={id} style={style}>
-        <Icon
-          name="Search"
-          fill={colors.neutral4}
-          style={styles.icon}
-        />
+        <Icon name="Search" fill={colors.neutral4} style={styles.icon} />
         <input
           id="input-common"
           ref={forwardRef}
