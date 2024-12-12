@@ -37,7 +37,7 @@ const Icon = (props: IconProps) => {
   return (
     <div
       id={props.id}
-      className='svg-icon'
+      className="svg-icon"
       style={{
         ...{
           width: `${props.width}px`,
