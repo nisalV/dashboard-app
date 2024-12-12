@@ -1,4 +1,4 @@
-name: CI - dasgboard-app-FE
+name: CI - dashboard-app-FE
 
 on:
   push:
