@@ -15,12 +15,17 @@ type ButtonProps = {
   borderColor?: string
   leftIcon?: string
   rightIcon?: string
+  rightElement?: React.ReactNode
   style?: React.CSSProperties
+  textStyles?: React.CSSProperties
   onClick: () => void
 }
 
 type ButtonIconProps = {
   icon: string
+  iconColor?: string
+  iconWidth?: number
+  iconHeight?: number
   showIndicator?: boolean
   style?: React.CSSProperties
   onClick: () => void
@@ -43,7 +48,9 @@ export const ButtonBase = ({
   borderColor,
   leftIcon,
   rightIcon,
+  rightElement,
   style,
+  textStyles,
   onClick,
 }: ButtonProps) => {
   return (
@@ -64,23 +71,18 @@ export const ButtonBase = ({
           <Icon
             id="button-base-left-icon"
             name={leftIcon}
-            fill={colors.white}
+            fill={textColor || colors.white}
           />
         )}
         <p
           id="button-base-text"
-          style={{ ...textSizes[textType], color: textColor }}
+          style={{ ...textSizes[textType], color: textColor, ...textStyles }}
         >
           {label}
         </p>
       </div>
-      {rightIcon && (
-        <Icon
-          id="button-base-right-icon"
-          name={rightIcon}
-          fill={colors.white}
-        />
-      )}
+      {rightIcon && <Icon name={rightIcon} fill={textColor || colors.white} />}
+      {rightElement}
     </button>
   )
 }
@@ -89,11 +91,19 @@ export const ButtonIcon = ({
   icon,
   showIndicator = false,
   style,
+  iconColor,
+  iconWidth,
+  iconHeight,
   onClick,
 }: ButtonIconProps) => {
   return (
     <button id="button-icon" style={style} onClick={onClick}>
-      <Icon name={icon} />
+      <Icon
+        name={icon}
+        fill={iconColor}
+        width={iconWidth}
+        height={iconHeight}
+      />
       {showIndicator && <div id="button-icon-indicator" />}
     </button>
   )
@@ -102,6 +112,19 @@ export const ButtonIcon = ({
 export const ButtonImage = ({ src, alt, style, onClick }: ButtonImageProps) => {
   return (
     <button id="button-image" style={style} onClick={onClick}>
+      <img src={src || fallbackUser} alt={alt} />
+    </button>
+  )
+}
+
+export const ButtonImageRound = ({
+  src,
+  alt,
+  style,
+  onClick,
+}: ButtonImageProps) => {
+  return (
+    <button id="button-image-round" style={style} onClick={onClick}>
       <img src={src || fallbackUser} alt={alt} />
     </button>
   )

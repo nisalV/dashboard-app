@@ -1,6 +1,10 @@
 import logo1 from '../assets/images/named-logo.svg'
+import logo2 from '../assets/images/logo.svg'
+import fallbackTeamImage from '../assets/images/fallback-team.svg'
 
 export const namedLogo = logo1
+export const logo = logo2
+export const fallbackTeam = fallbackTeamImage
 
 export const colors = {
   white: 'white',
@@ -23,6 +27,15 @@ export const storage = {
 export const sizes = {
   avatar: {
     medium: 30,
+  },
+  icon: {
+    small: 12,
+    medium: 18,
+    large: 30,
+  },
+  button: {
+    medium: 30,
+    large: 48,
   },
 }
 
@@ -48,4 +61,8 @@ export const values = {
   inputMaxLength: {
     search: 100,
   },
+}
+
+export const layoutBreakPoint = {
+  leftPanel: 1250,
 }
