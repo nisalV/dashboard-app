@@ -5,18 +5,35 @@ type ImageProps = {
   width: number
   height: number
   src?: string
+  fallback?: string
   alt?: string
+  style?: React.CSSProperties
 }
 
-export const Image = ({ width, height, src, alt }: ImageProps) => {
-  return <img src={src} style={{ width, height }} alt={alt} />
+export const Image = ({
+  width,
+  height,
+  src,
+  fallback,
+  alt,
+  style,
+}: ImageProps) => {
+  return (
+    <img src={src || fallback} style={{ ...style, width, height }} alt={alt} />
+  )
 }
 
-export const Avatar = ({ width, height, src, alt = 'user' }: ImageProps) => {
+export const Avatar = ({
+  width,
+  height,
+  src,
+  fallback,
+  alt = 'user',
+}: ImageProps) => {
   return (
     <img
       id="avatar-img"
-      src={src || fallbackUser}
+      src={src || fallback || fallbackUser}
       style={{ width, height }}
       alt={alt}
     />

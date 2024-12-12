@@ -5,12 +5,32 @@ import Search from '../../../assets/icons/Search'
 import Plus from '../../../assets/icons/Plus'
 import Bell from '../../../assets/icons/Bell'
 import Settings from '../../../assets/icons/Settings'
+import ArrowDown from '../../../assets/icons/ArrowDown'
+import ArrowUp from '../../../assets/icons/ArrowUp'
+import ArrowRight from '../../../assets/icons/ArrowRight'
+import Calendar from '../../../assets/icons/Calendar'
+import Comment from '../../../assets/icons/Comment'
+import Folder from '../../../assets/icons/Folder'
+import Grid from '../../../assets/icons/Grid'
+import Info from '../../../assets/icons/Info'
+import SignOut from '../../../assets/icons/SignOut'
+import User from '../../../assets/icons/User'
 
 const iconList = {
   Search: (props: IconData) => <Search {...props} />,
   Plus: (props: IconData) => <Plus {...props} />,
   Bell: (props: IconData) => <Bell {...props} />,
   Settings: (props: IconData) => <Settings {...props} />,
+  ArrowDown: (props: IconData) => <ArrowDown {...props} />,
+  ArrowUp: (props: IconData) => <ArrowUp {...props} />,
+  ArrowRight: (props: IconData) => <ArrowRight {...props} />,
+  Calendar: (props: IconData) => <Calendar {...props} />,
+  Comment: (props: IconData) => <Comment {...props} />,
+  Folder: (props: IconData) => <Folder {...props} />,
+  Grid: (props: IconData) => <Grid {...props} />,
+  Info: (props: IconData) => <Info {...props} />,
+  SignOut: (props: IconData) => <SignOut {...props} />,
+  User: (props: IconData) => <User {...props} />,
 }
 
 type IconProps = {

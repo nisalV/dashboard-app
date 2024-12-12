@@ -24,7 +24,7 @@ export const textSizes = {
   },
   medium: {
     fontSize: 14,
-    fontWeight: 500,
+    fontWeight: 400,
   },
   mediumBold: {
     fontSize: 14,
@@ -34,7 +34,7 @@ export const textSizes = {
     fontSize: 16,
   },
   largeBold: {
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: 500,
   },
   extraLargeBold: {

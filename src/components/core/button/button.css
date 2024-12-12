@@ -65,17 +65,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 3px;
+  border: 0;
+  background-color: #ffffff;
+  transition: filter 0.3s ease;
+}
+
+#button-image-round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   cursor: pointer;
   width: 30px;
   height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   border-radius: 30px;
   border: 2px solid #ffffff00;
   filter: brightness(1);
   transition: outline 0.3s ease;
 }
 
-#button-image:hover {
+#button-image-round:hover {
   border: 2px solid #3772ff;
 }
 
