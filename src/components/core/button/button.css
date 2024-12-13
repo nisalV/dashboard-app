@@ -7,7 +7,7 @@
   border-radius: 6px;
   padding: 0 12px;
   filter: brightness(1);
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #button-base:hover {
@@ -17,7 +17,7 @@
 #button-base-left-container {
   display: flex;
   align-items: center;
-  width: 94%;
+  width: 97%;
 }
 
 #button-base-text {
@@ -43,7 +43,7 @@
   border: 0;
   background-color: #ffffff;
   filter: brightness(1);
-  transition: filter 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #button-icon-indicator {
