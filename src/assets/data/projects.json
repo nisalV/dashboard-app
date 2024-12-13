@@ -1,156 +1,156 @@
 {
   "projects": [
     {
-      "id": "project-1",
+      "id": "project_1",
       "name": "Create routes",
       "description": "event production",
       "status": "In progress",
       "last_update": "Last updated on: 04 April, 2022",
       "assignees": [
         {
-          "id": "user-1",
+          "id": "user_1",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-2",
+          "id": "user_2",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-3",
+          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-4",
+          "id": "user_4",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-5",
+          "id": "user_5",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-6",
+          "id": "user_6",
           "name": "Nisal Perera",
           "image": ""
         }
       ]
     },
     {
-      "id": "project-2",
+      "id": "project_2",
       "name": "Development React App",
       "description": "event production",
       "status": "In progress",
       "last_update": "Last updated on: 04 April, 2022",
       "assignees": [
         {
-          "id": "user-1",
+          "id": "user_1",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-2",
+          "id": "user_2",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-3",
+          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-4",
+          "id": "user_4",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-5",
+          "id": "user_5",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-6",
+          "id": "user_6",
           "name": "Nisal Perera",
           "image": ""
         }
       ]
     },
     {
-      "id": "project-3",
+      "id": "project_3",
       "name": "Sport Xi Project",
       "description": "event production",
       "status": "In progress",
       "last_update": "Last updated on: 04 April, 2022",
       "assignees": [
         {
-          "id": "user-1",
+          "id": "user_1",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-2",
+          "id": "user_2",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-3",
+          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-4",
+          "id": "user_4",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-5",
+          "id": "user_5",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-6",
+          "id": "user_6",
           "name": "Nisal Perera",
           "image": ""
         }
       ]
     },
     {
-      "id": "project-4",
+      "id": "project_4",
       "name": "Wordpress theme",
       "description": "event production",
       "status": "In progress",
       "last_update": "Last updated on: 04 April, 2022",
       "assignees": [
         {
-          "id": "user-1",
+          "id": "user_1",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-2",
+          "id": "user_2",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-3",
+          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-4",
+          "id": "user_4",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-5",
+          "id": "user_5",
           "name": "Nisal Perera",
           "image": ""
         },
         {
-          "id": "user-6",
+          "id": "user_6",
           "name": "Nisal Perera",
           "image": ""
         }

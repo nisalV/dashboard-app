@@ -7,6 +7,7 @@ export const logo = logo2
 export const fallbackTeam = fallbackTeamImage
 
 export const colors = {
+  transparent: 'transparent',
   white: 'white',
   black: 'black',
   orange: '#FF5C00',
@@ -48,16 +49,7 @@ export const spaces = {
 }
 
 export const values = {
-  daysOfWeek: [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-  ],
-  commentMAxLength: 800,
+  taskStatus: ['to-do', 'in-progress', 'approved', 'reject'],
   inputMaxLength: {
     search: 100,
   },

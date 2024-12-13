@@ -1,7 +1,7 @@
 {
   "messages": [
-    { "id": "message-1", "message": "message" },
-    { "id": "message-2", "message": "message" },
-    { "id": "message-3", "message": "message" }
+    { "id": "message_1", "message": "message" },
+    { "id": "message_2", "message": "message" },
+    { "id": "message_3", "message": "message" }
   ]
 }
