@@ -1,0 +1,96 @@
+{
+  "project-id": "project_3",
+  "project-name": "Sport Xi Project",
+  "to-do": [
+    {
+      "id": "task_1",
+      "title": "User inerview",
+      "category": "Research",
+      "status": "to-do"
+    },
+    {
+      "id": "task_2",
+      "title": "Design System",
+      "category": "Design",
+      "status": "to-do"
+    },
+    {
+      "id": "task_3",
+      "title": "Speech",
+      "category": "Other",
+      "status": "to-do"
+    },
+    {
+      "id": "task_4",
+      "title": "Wireframe",
+      "category": "Design",
+      "status": "to-do"
+    }
+  ],
+  "in-progress": [
+    {
+      "id": "task_5",
+      "title": "UI Design",
+      "category": "Design",
+      "status": "in-progress"
+    },
+    {
+      "id": "task_6",
+      "title": "Check Clients Feedback",
+      "category": "Feedback",
+      "status": "in-progress"
+    }
+  ],
+  "approved": [
+    {
+      "id": "task_7",
+      "title": "Prototype",
+      "category": "Research",
+      "status": "approved"
+    },
+    {
+      "id": "task_8",
+      "title": "Detail Page ",
+      "category": "Design",
+      "status": "approved"
+    },
+    {
+      "id": "task_9",
+      "title": "Animation preloaders",
+      "category": "interface",
+      "status": "approved"
+    },
+    {
+      "id": "task_10",
+      "title": "Sorting category",
+      "category": "UX Research",
+      "status": "approved"
+    }
+  ],
+  "reject": [
+    {
+      "id": "task_11",
+      "title": "Group Management",
+      "category": "Other",
+      "status": "reject"
+    },
+    {
+      "id": "task_12",
+      "title": "Design System",
+      "category": "Design",
+      "status": "reject"
+    },
+    {
+      "id": "task_13",
+      "title": "Slider controls",
+      "category": "interface",
+      "status": "reject"
+    },
+    {
+      "id": "task_14",
+      "title": "Slider controls",
+      "category": "Design",
+      "status": "reject"
+    }
+  ]
+}
