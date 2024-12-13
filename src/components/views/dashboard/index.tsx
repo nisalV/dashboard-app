@@ -18,8 +18,9 @@ const styles: Record<string, React.CSSProperties> = {
 
 const setDropIndicatorColor = (e: React.DragEvent<HTMLDivElement>) => {
   e.preventDefault()
-  if ((e.target?.id as string)?.endsWith('up')) {
-    const element = document.getElementById(e.target?.id)
+  const target = e.target as HTMLElement
+  if (target?.id?.endsWith('up')) {
+    const element = document.getElementById(target?.id)
 
     if (!element) return
 
@@ -29,8 +30,9 @@ const setDropIndicatorColor = (e: React.DragEvent<HTMLDivElement>) => {
 
 const removeDropIndicatorColor = (e: React.DragEvent<HTMLDivElement>) => {
   e.preventDefault()
-  if ((e.target?.id as string)?.endsWith('up')) {
-    const element = document.getElementById(e.target?.id)
+  const target = e.target as HTMLElement
+  if (target?.id?.endsWith('up')) {
+    const element = document.getElementById(target?.id)
 
     if (!element) return
 
@@ -57,7 +59,7 @@ export const DashboardView = () => {
     draggingTask &&
       updateTasks(
         draggingTask?.taskId,
-        e.target?.id || '',
+        (e.target as HTMLElement)?.id || '',
         draggingTask?.status,
         status
       )
