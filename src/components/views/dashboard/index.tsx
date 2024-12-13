@@ -45,7 +45,7 @@ export const DashboardView = () => {
   const [draggingTask, setDraggingTask] = useState<DraggingTask | null>(null)
 
   const onDragStart = useCallback(
-    (e: React.DragEvent<HTMLDivElement>, taskId: string, status: string) => {
+    (taskId: string, status: string) => {
       setDraggingTask({ taskId, status })
     },
     []
@@ -101,7 +101,7 @@ export const DashboardView = () => {
                     id={`task-${task.id}`}
                     className="task-item"
                     draggable={true}
-                    onDragStart={(e) => onDragStart(e, task.id, status)}
+                    onDragStart={() => onDragStart(task.id, status)}
                     onDragEnd={handleDragEnd}
                     style={styles.taskItem}
                   >
