@@ -22,9 +22,12 @@ export const textSizes = {
     fontSize: 12,
     fontWeight: 600,
   },
+  mediumLight: {
+    fontSize: 14,
+    fontWeight: 300,
+  },
   medium: {
     fontSize: 14,
-    fontWeight: 400,
   },
   mediumBold: {
     fontSize: 14,
@@ -32,6 +35,7 @@ export const textSizes = {
   },
   large: {
     fontSize: 16,
+    fontWeight: 400,
   },
   largeBold: {
     fontSize: 16,

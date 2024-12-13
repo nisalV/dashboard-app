@@ -16,6 +16,7 @@ export enum TextSizes {
   SMALL = 'small',
   SMALL_SEMI_BOLD = 'smallSemiBold',
   SMALL_BOLD = 'smallBold',
+  MEDIUM_LIGHT = 'mediumLight',
   MEDIUM = 'medium',
   MEDIUM_BOLD = 'mediumBold',
   LARGE = 'large',
@@ -52,4 +53,23 @@ export type TaskData = {
 export type DraggingTask = {
   taskId: string
   status: string
+}
+
+export type User = {
+  id: string
+  name: string
+  image: string
+}
+
+export type Project = {
+  id: string
+  name: string
+  description: string
+  status: string
+  last_update: string
+  assignees: User[]
+}
+
+export type Projects = {
+  projects: Project[]
 }

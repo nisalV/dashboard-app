@@ -54,3 +54,17 @@
   border-radius: 8px;
   outline: 2px solid #f4f5f6;
 }
+
+.project-list.hide {
+  height: 0px;
+  border: 2px solid transparent;
+}
+
+.project-list.show {
+  overflow: hidden;
+  border: 2px solid #f4f5f6;
+  border-radius: 8px;
+  width: calc(100% - 4px);
+  padding-bottom: 2px;
+  transition: border 0.3s ease;
+}

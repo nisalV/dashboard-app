@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react'
-import { TaskData, TaskStatusTypes } from '../types/dataTypes'
+import { Task, TaskData, TaskStatusTypes } from '../types/dataTypes'
 import storedTasks from '../assets/data/tasks.json'
 
 const InitialData = {
@@ -44,7 +44,9 @@ export const useFetchTasks = () => {
       (item) => item.id === taskId
     )
 
-    if (!updatingTask) return
+    const droppedOverTaskId = droppedId.split('-').pop()
+
+    if (!updatingTask || droppedOverTaskId === taskId) return
 
     const updatedTask = { ...updatingTask, status: newStatus }
 
@@ -54,13 +56,29 @@ export const useFetchTasks = () => {
 
     let updatedNewStatusTasks = []
 
-    if (droppedId === 'task-bottom-space') {
+    if (prevStatus === newStatus) {
+      if (droppedId === 'task-bottom-space') {
+        updatedNewStatusTasks = [...updatedPrevStatusTasks, updatedTask]
+      } else {
+        const nextTaskId = droppedOverTaskId
+
+        if (nextTaskId === taskId) return
+
+        updatedNewStatusTasks = updatedPrevStatusTasks.reduce((acc, task) => {
+          if (task.id === nextTaskId) {
+            acc.push(updatedTask)
+          }
+          acc.push(task)
+          return acc
+        }, [] as Task[])
+      }
+    } else if (droppedId === 'task-bottom-space') {
       updatedNewStatusTasks = [
         ...prevTasks[newStatus as TaskStatusTypes],
         updatedTask,
       ]
     } else {
-      const nextTaskId = droppedId.split('-')?.[1]
+      const nextTaskId = droppedOverTaskId
 
       if (!nextTaskId) return
 
@@ -72,13 +90,15 @@ export const useFetchTasks = () => {
           acc.push(task)
           return acc
         },
-        [] as (typeof prevTasks)[TaskStatusTypes]
+        [] as Task[]
       )
     }
 
     const updatedTaskData = {
       ...prevTasks,
-      [prevStatus as TaskStatusTypes]: updatedPrevStatusTasks,
+      ...(prevStatus !== newStatus && {
+        [prevStatus as TaskStatusTypes]: updatedPrevStatusTasks,
+      }),
       [newStatus as TaskStatusTypes]: updatedNewStatusTasks,
     }
 
