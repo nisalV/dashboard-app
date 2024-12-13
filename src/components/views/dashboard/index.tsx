@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { colors, sizes, spaces, values } from '../../../common/values'
+import { colors, spaces, values } from '../../../common/values'
 import { useFetchTasks } from '../../../hooks/tasksHooks'
 import { DraggingTask, TaskStatusTypes } from '../../../types/dataTypes'
 import './dashboardStyles.css'
