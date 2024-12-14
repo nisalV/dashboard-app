@@ -4,6 +4,7 @@ import { TextSizes } from '../../../types/dataTypes'
 
 type TextProps = {
   text: string
+  id?: string
   textType?: TextSizes
   textColor?: string
   style?: React.CSSProperties
@@ -11,11 +12,14 @@ type TextProps = {
 
 export const Text = ({
   text,
+  id,
   textType = TextSizes.SMALL,
   textColor = colors.neutral5,
   style,
 }: TextProps) => {
   return (
-    <p style={{ ...textSizes[textType], color: textColor, ...style }}>{text}</p>
+    <p id={id} style={{ ...textSizes[textType], color: textColor, ...style }}>
+      {text}
+    </p>
   )
 }

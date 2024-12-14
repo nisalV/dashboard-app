@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router'
 import './dashboardStyles.css'
 import { FloatButton } from './FloatButton'
 import { Text } from '../../core/text'
-import { Board } from './Board'
+import { BoardView } from './Board'
 import { TextSizes } from '../../../types/dataTypes'
 
 const BoardEmptyView = () => {
@@ -18,7 +18,7 @@ export const DashboardView = () => {
       <div id="container">
         <Routes>
           <Route path="/" element={<BoardEmptyView />} />
-          <Route path=":boardId" element={<Board />} />
+          <Route path=":boardId" element={<BoardView />} />
         </Routes>
       </div>
       <FloatButton />

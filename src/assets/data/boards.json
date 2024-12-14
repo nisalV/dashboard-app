@@ -1,11 +1,11 @@
 {
-  "projects": [
+  "boards": [
     {
-      "id": "project_1",
+      "id": "board_1",
       "name": "Create routes",
-      "description": "event production",
+      "description": "event production 3",
       "status": "In progress",
-      "last_update": "Last updated on: 04 April, 2022",
+      "last_update": "2024-12-14T18:30:00.000Z",
       "assignees": [
         {
           "id": "user_1",
@@ -16,35 +16,15 @@
           "id": "user_2",
           "name": "Nisal Perera",
           "image": ""
-        },
-        {
-          "id": "user_3",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_4",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_5",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_6",
-          "name": "Nisal Perera",
-          "image": ""
         }
       ]
     },
     {
-      "id": "project_2",
+      "id": "board_2",
       "name": "Development React App",
-      "description": "event production",
+      "description": "event production 2",
       "status": "In progress",
-      "last_update": "Last updated on: 04 April, 2022",
+      "last_update": "2022-04-03T18:30:00.000Z",
       "assignees": [
         {
           "id": "user_1",
@@ -79,24 +59,14 @@
       ]
     },
     {
-      "id": "project_3",
+      "id": "board_3",
       "name": "Sport Xi Project",
       "description": "event production",
       "status": "In progress",
-      "last_update": "Last updated on: 04 April, 2022",
+      "last_update": "2022-04-03T18:30:00.000Z",
       "assignees": [
         {
           "id": "user_1",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_2",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },
@@ -118,11 +88,11 @@
       ]
     },
     {
-      "id": "project_4",
+      "id": "board_4",
       "name": "Wordpress theme",
-      "description": "event production",
+      "description": "event production 4",
       "status": "In progress",
-      "last_update": "Last updated on: 04 April, 2022",
+      "last_update": "2024-12-03T18:30:00.000Z",
       "assignees": [
         {
           "id": "user_1",
@@ -131,11 +101,6 @@
         },
         {
           "id": "user_2",
-          "name": "Nisal Perera",
-          "image": ""
-        },
-        {
-          "id": "user_3",
           "name": "Nisal Perera",
           "image": ""
         },

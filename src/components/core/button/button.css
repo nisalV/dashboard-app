@@ -79,14 +79,10 @@
   justify-content: center;
   overflow: hidden;
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  min-width: 30px;
-  min-height: 30px;
-  border-radius: 30px;
-  border: 2px solid #ffffff00;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
   filter: brightness(1);
-  transition: outline 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 #button-image-round:hover {

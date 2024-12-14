@@ -1,6 +1,7 @@
 @media (max-width: 1250px) {
   .left-panel-container {
     display: none;
+    z-index: 6;
   }
 
   .left-panel-container.show {
@@ -55,16 +56,28 @@
   outline: 2px solid #f4f5f6;
 }
 
-.project-list.hide {
+.board-list.hide {
+  overflow: hidden;
   height: 0px;
   border: 2px solid transparent;
 }
 
-.project-list.show {
-  overflow: hidden;
+.board-list.show {
   border: 2px solid #f4f5f6;
   border-radius: 8px;
   width: calc(100% - 4px);
   padding-bottom: 2px;
   transition: border 0.3s ease;
+}
+
+#message-count-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff5c00;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  min-width: 18px;
+  margin-right: 4px;
 }

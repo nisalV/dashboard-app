@@ -1,30 +1,130 @@
 {
-  "project-id": "project_3",
-  "project-name": "Sport Xi Project",
+  "board-id": "board_3",
+  "board-name": "Sport Xi Project",
   "to-do": [
     {
       "id": "task_1",
-      "title": "User inerview",
+      "title": "User interview",
       "category": "Research",
-      "status": "to-do"
+      "status": "to-do",
+      "link-count": 2,
+      "comment-count": 2,
+      "priority": "Low",
+      "due-date": "2024-12-15T00:00:00.000Z",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_2",
       "title": "Design System",
       "category": "Design",
-      "status": "to-do"
+      "status": "to-do",
+      "link-count": 2,
+      "comment-count": 2,
+      "report-count": 2,
+      "priority": "Medium",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_3",
       "title": "Speech",
       "category": "Other",
-      "status": "to-do"
+      "status": "to-do",
+      "link-count": 1,
+      "comment-count": 3,
+      "notification": "Stream",
+      "priority": "Low",
+      "assignees": [
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_4",
       "title": "Wireframe",
       "category": "Design",
-      "status": "to-do"
+      "status": "to-do",
+      "link-count": 1,
+      "comment-count": 3,
+      "due-date": "2024-12-13T00:00:00.000Z",
+      "priority": "High",
+      "image": "image_url",
+      "assignees": [
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     }
   ],
   "in-progress": [
@@ -32,65 +132,384 @@
       "id": "task_5",
       "title": "UI Design",
       "category": "Design",
-      "status": "in-progress"
+      "status": "in-progress",
+      "link-count": 1,
+      "comment-count": 3,
+      "due-date": "2024-12-14T00:00:00.000Z",
+      "priority": "High",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_6",
       "title": "Check Clients Feedback",
       "category": "Feedback",
-      "status": "in-progress"
+      "status": "in-progress",
+      "comment-count": 3,
+      "due-date": "2023-12-14T00:00:00.000Z",
+      "priority": "Low",
+      "image": "image_url",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_7",
+      "title": "Copyright",
+      "category": "Presentation",
+      "status": "in-progress",
+      "comment-count": 4,
+      "due-date": "2023-12-14T00:00:00.000Z",
+      "priority": "Low",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_8",
+      "title": "Filter sorting",
+      "category": "UX Reserch",
+      "status": "in-progress",
+      "comment-count": 4,
+      "report-count": 2,
+      "due-date": "2023-12-14T00:00:00.000Z",
+      "priority": "Low",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     }
   ],
   "approved": [
     {
-      "id": "task_7",
+      "id": "task_9",
       "title": "Prototype",
       "category": "Research",
-      "status": "approved"
-    },
-    {
-      "id": "task_8",
-      "title": "Detail Page ",
-      "category": "Design",
-      "status": "approved"
-    },
-    {
-      "id": "task_9",
-      "title": "Animation preloaders",
-      "category": "interface",
-      "status": "approved"
+      "status": "approved",
+      "link-count": 35,
+      "comment-count": 243,
+      "priority": "Low",
+      "assignees": [
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_10",
+      "title": "Detail Page ",
+      "category": "Design",
+      "status": "approved",
+      "link-count": 6,
+      "comment-count": 28,
+      "priority": "Low",
+      "image": "image_url",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_11",
+      "title": "Animation preloaders",
+      "category": "interface",
+      "status": "approved",
+      "link-count": 4,
+      "comment-count": 9,
+      "priority": "High",
+      "assignees": [
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_12",
       "title": "Sorting category",
       "category": "UX Research",
-      "status": "approved"
+      "status": "approved",
+      "link-count": 1,
+      "comment-count": 8,
+      "priority": "High",
+      "image": "image_url",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     }
   ],
   "reject": [
     {
-      "id": "task_11",
+      "id": "task_13",
       "title": "Group Management",
       "category": "Other",
-      "status": "reject"
-    },
-    {
-      "id": "task_12",
-      "title": "Design System",
-      "category": "Design",
-      "status": "reject"
-    },
-    {
-      "id": "task_13",
-      "title": "Slider controls",
-      "category": "interface",
-      "status": "reject"
+      "status": "reject",
+      "comment-count": 329,
+      "notification": "Group Call",
+      "priority": "Low",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     },
     {
       "id": "task_14",
+      "title": "Design System",
+      "category": "Design",
+      "status": "reject",
+      "link-count": 3,
+      "comment-count": 8,
+      "report-count": 2,
+      "priority": "Medium",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_15",
+      "title": "Slider controls",
+      "category": "interface",
+      "status": "reject",
+      "link-count": 8,
+      "comment-count": 31,
+      "priority": "High",
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_5",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_6",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "task_16",
       "title": "Slider controls",
       "category": "Design",
-      "status": "reject"
+      "status": "reject",
+      "priority": "High",
+      "image": "image_url",
+      "link-count": 2,
+      "comment-count": 1,
+      "assignees": [
+        {
+          "id": "user_1",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_2",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_3",
+          "name": "Nisal Perera",
+          "image": ""
+        },
+        {
+          "id": "user_4",
+          "name": "Nisal Perera",
+          "image": ""
+        }
+      ]
     }
   ]
 }

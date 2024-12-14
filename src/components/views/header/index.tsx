@@ -119,6 +119,7 @@ export const Header = () => {
         onClick={() => {}}
       />
       <ButtonImageRound
+        size={30}
         src={profileImage}
         style={styles.avatar}
         onClick={() => {}}
