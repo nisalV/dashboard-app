@@ -193,6 +193,7 @@ export const TaskView = ({
         <div className="task-footer">
           {filteredFooterData.map((data, index) => (
             <div
+              key={index}
               className="foter-items"
               style={{
                 marginRight:
