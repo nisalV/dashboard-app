@@ -1,8 +1,8 @@
-import { Project } from './dataTypes'
+import { Board } from './dataTypes'
 
 export type LayoutContextTypes = {
-  project: Project | null
+  board: Board | null
   showLeftPanel: boolean
-  setProject: (proj: Project | null) => void
+  setBoard: (proj: Board | null) => void
   setShowLeftPanel: (show: boolean) => void
 }

@@ -7,9 +7,17 @@ export const textStyles = {
 }
 
 export const textSizes = {
-  extraSmall: {
+  smallest: {
     fontSize: 8,
     fontWeight: 500,
+  },
+  smallestBold: {
+    fontSize: 9,
+    fontWeight: 600,
+  },
+  extraSmall: {
+    fontSize: 10,
+    fontWeight: 600,
   },
   small: {
     fontSize: 12,

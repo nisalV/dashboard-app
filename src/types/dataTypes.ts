@@ -12,6 +12,8 @@ export enum ButtonTypes {
 }
 
 export enum TextSizes {
+  SMALLEST = 'smallest',
+  SMALLEST_BOLD = 'smallestBold',
   EXTRA_SMALL = 'extraSmall',
   SMALL = 'small',
   SMALL_SEMI_BOLD = 'smallSemiBold',
@@ -26,6 +28,22 @@ export enum TextSizes {
 
 export type TaskStatusTypes = 'to-do' | 'in-progress' | 'approved' | 'reject'
 
+export enum TaskPriority {
+  LOW = 'Low',
+  MEDIUM = 'MEDIUM',
+  HIGH = 'High',
+}
+
+export enum Categories {
+  RESEARCH = 'Research',
+  DESIGN = 'Design',
+  FEEDBACK = 'Feedback',
+  PRESENTATION = 'Presentation',
+  UX_RESEARCH = 'UX Research',
+  OTHER = 'Other',
+  INTERFACE = 'Interface',
+}
+
 export type IconData = {
   fill?: string
   width?: number
@@ -39,11 +57,19 @@ export type Task = {
   title: string
   category: string
   status: string
+  priority: string
+  assignees: User[]
+  'link-count'?: number
+  'comment-count'?: number
+  'report-count'?: number
+  'due-date'?: string
+  notification?: string
+  image?: string
 }
 
 export type TaskData = {
-  'project-id': string
-  'project-name': string
+  'board-id': string
+  'board-name': string
   'to-do': Task[]
   'in-progress': Task[]
   approved: Task[]
@@ -61,7 +87,7 @@ export type User = {
   image: string
 }
 
-export type Project = {
+export type Board = {
   id: string
   name: string
   description: string
@@ -70,6 +96,6 @@ export type Project = {
   assignees: User[]
 }
 
-export type Projects = {
-  projects: Project[]
+export type Boards = {
+  boards: Board[]
 }

@@ -2,9 +2,9 @@ import fallbackUser from '../../../../src/assets/images/fallback-user.png'
 import './image.css'
 
 type ImageProps = {
-  width: number
-  height: number
-  src?: string
+  src: string
+  width?: number
+  height?: number
   fallback?: string
   alt?: string
   style?: React.CSSProperties
@@ -19,7 +19,7 @@ export const Image = ({
   style,
 }: ImageProps) => {
   return (
-    <img src={src || fallback} style={{ ...style, width, height }} alt={alt} />
+    <img src={src || fallback} style={{ width, height, ...style }} alt={alt} />
   )
 }
 

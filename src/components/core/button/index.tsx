@@ -1,5 +1,5 @@
 import { textSizes } from '../../../common/commonStyles'
-import { colors } from '../../../common/values'
+import { colors, spaces } from '../../../common/values'
 import { ButtonTypes, TextSizes } from '../../../types/dataTypes'
 import Icon from '../Icon'
 import fallbackUser from '../../../assets/images/fallback-user.png'
@@ -34,6 +34,8 @@ type ButtonIconProps = {
 type ButtonImageProps = {
   src: string | undefined
   alt?: string
+  size: number
+  fallback?: string
   style?: React.CSSProperties
   onClick: () => void
 }
@@ -120,12 +122,25 @@ export const ButtonImage = ({ src, alt, style, onClick }: ButtonImageProps) => {
 export const ButtonImageRound = ({
   src,
   alt,
+  size,
   style,
+  fallback,
   onClick,
 }: ButtonImageProps) => {
   return (
-    <button id="button-image-round" style={style} onClick={onClick}>
-      <img src={src || fallbackUser} alt={alt} />
+    <button
+      id="button-image-round"
+      style={{ width: size, height: size, minWidth: size, ...style }}
+      onClick={onClick}
+    >
+      <img
+        src={src || fallback || fallbackUser}
+        alt={alt}
+        style={{
+          width: size + spaces.smallest,
+          height: size + spaces.smallest,
+        }}
+      />
     </button>
   )
 }

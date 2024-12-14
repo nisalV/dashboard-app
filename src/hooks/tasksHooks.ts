@@ -2,26 +2,31 @@ import { useEffect, useState, useMemo } from 'react'
 import { Task, TaskData, TaskStatusTypes } from '../types/dataTypes'
 import storedTasks from '../assets/data/tasks.json'
 
-const InitialData = {
-  'project-id': '',
-  'project-name': '',
+const initialData = {
+  'board-id': '',
+  'board-name': '',
   'to-do': [],
   'in-progress': [],
   approved: [],
   reject: [],
 }
 
-export const useFetchTasks = () => {
+export const useFetchTasks = (boardId: string) => {
   const [taskData, setTaskData] = useState<TaskData>(() => {
-    const storedTasks = localStorage.getItem('tasks')
-    return storedTasks ? JSON.parse(storedTasks) : InitialData
+    const storedTasks = localStorage.getItem(`tasks_${boardId}`)
+    return storedTasks ? JSON.parse(storedTasks) : initialData
   })
 
   useEffect(() => {
     const loadTasks = () => {
-      if (!taskData['project-id'].length) {
+      if (boardId !== storedTasks['board-id']) {
+        localStorage.setItem(`tasks_${boardId}`, JSON.stringify(initialData))
+        setTaskData(initialData)
+        return
+      }
+      if (!taskData['board-id'].length) {
         try {
-          localStorage.setItem('tasks', JSON.stringify(storedTasks))
+          localStorage.setItem(`tasks_${boardId}`, JSON.stringify(storedTasks))
           setTaskData(storedTasks)
         } catch (error) {
           console.error('Error loading tasks:', error)
@@ -30,7 +35,7 @@ export const useFetchTasks = () => {
     }
 
     loadTasks()
-  }, [taskData])
+  }, [boardId, taskData])
 
   const updateTasks = (
     taskId: string,
@@ -46,7 +51,8 @@ export const useFetchTasks = () => {
 
     const droppedOverTaskId = droppedId.split('-').pop()
 
-    if (!updatingTask || droppedOverTaskId === taskId) return
+    if (!updatingTask || droppedOverTaskId === taskId || !droppedOverTaskId)
+      return
 
     const updatedTask = { ...updatingTask, status: newStatus }
 
@@ -60,12 +66,10 @@ export const useFetchTasks = () => {
       if (droppedId === 'task-bottom-space') {
         updatedNewStatusTasks = [...updatedPrevStatusTasks, updatedTask]
       } else {
-        const nextTaskId = droppedOverTaskId
-
-        if (nextTaskId === taskId) return
+        if (droppedOverTaskId === taskId) return
 
         updatedNewStatusTasks = updatedPrevStatusTasks.reduce((acc, task) => {
-          if (task.id === nextTaskId) {
+          if (task.id === droppedOverTaskId) {
             acc.push(updatedTask)
           }
           acc.push(task)
@@ -78,13 +82,11 @@ export const useFetchTasks = () => {
         updatedTask,
       ]
     } else {
-      const nextTaskId = droppedOverTaskId
-
-      if (!nextTaskId) return
+      if (!droppedOverTaskId) return
 
       updatedNewStatusTasks = prevTasks[newStatus as TaskStatusTypes].reduce(
         (acc, task) => {
-          if (task.id === nextTaskId) {
+          if (task.id === droppedOverTaskId) {
             acc.push(updatedTask)
           }
           acc.push(task)
@@ -102,7 +104,7 @@ export const useFetchTasks = () => {
       [newStatus as TaskStatusTypes]: updatedNewStatusTasks,
     }
 
-    localStorage.setItem('tasks', JSON.stringify(updatedTaskData))
+    localStorage.setItem(`tasks_${boardId}`, JSON.stringify(updatedTaskData))
     setTaskData(updatedTaskData)
   }
 

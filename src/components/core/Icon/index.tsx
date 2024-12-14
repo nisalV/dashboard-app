@@ -15,6 +15,10 @@ import Grid from '../../../assets/icons/Grid'
 import Info from '../../../assets/icons/Info'
 import SignOut from '../../../assets/icons/SignOut'
 import User from '../../../assets/icons/User'
+import Link from '../../../assets/icons/Link'
+import Pencil from '../../../assets/icons/Pencil'
+import Flash from '../../../assets/icons/Flash'
+import Dots from '../../../assets/icons/Dots'
 
 const iconList = {
   Search: (props: IconData) => <Search {...props} />,
@@ -31,6 +35,10 @@ const iconList = {
   Info: (props: IconData) => <Info {...props} />,
   SignOut: (props: IconData) => <SignOut {...props} />,
   User: (props: IconData) => <User {...props} />,
+  Link: (props: IconData) => <Link {...props} />,
+  Pencil: (props: IconData) => <Pencil {...props} />,
+  Flash: (props: IconData) => <Flash {...props} />,
+  Dots: (props: IconData) => <Dots {...props} />,
 }
 
 type IconProps = {
