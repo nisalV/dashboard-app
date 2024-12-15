@@ -1,0 +1,7 @@
+#board-container {
+  width: calc(100% - 48px);
+  height: 173.9px;
+  padding: 22px 23px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e8ec;
+}

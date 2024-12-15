@@ -1,6 +1,6 @@
-import { colors, sizes } from '../../../common/values'
-import { useLayout } from '../../../hooks/layoutHooks'
-import { ButtonIcon } from '../../core/button'
+import { colors, sizes } from '../../common/values'
+import { useLayout } from '../../hooks/layoutHooks'
+import { ButtonIcon } from '../core/button'
 
 const styles: Record<string, React.CSSProperties> = {
   floatButton: {
