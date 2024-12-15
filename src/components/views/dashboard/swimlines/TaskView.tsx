@@ -54,7 +54,6 @@ const styles: Record<string, React.CSSProperties> = {
 
 type TaskProps = {
   task: Task
-  taskIndex: number
   status: string
   draggingTask: DraggingTask | null
   onDragStart: (id: string, status: string) => void
@@ -65,7 +64,6 @@ type TaskProps = {
 
 export const TaskView = ({
   task,
-  taskIndex,
   status,
   draggingTask,
   onDragStart,
@@ -125,7 +123,7 @@ export const TaskView = ({
   const filteredFooterData = footerData.filter((item) => !!item)
 
   return (
-    <div key={`${task.id}-${taskIndex}`} id={`task-container-${task.id}`}>
+    <>
       <div
         id={`task-up-${task.id}`}
         className="task-item-up"
@@ -211,6 +209,6 @@ export const TaskView = ({
           ))}
         </div>
       </div>
-    </div>
+    </>
   )
 }

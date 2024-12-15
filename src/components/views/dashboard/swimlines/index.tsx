@@ -35,7 +35,7 @@ type swimlanesProps = {
 }
 
 export const Swimlines = ({ boardId }: swimlanesProps) => {
-  const { tasks, updateTasks } = useFetchTasks(boardId || '')
+  const { tasks, filteredTasks, updateTasks } = useFetchTasks(boardId || '')
   const [draggingTask, setDraggingTask] = useState<DraggingTask | null>(null)
 
   const onDragStart = useCallback((taskId: string, status: string) => {
@@ -65,6 +65,8 @@ export const Swimlines = ({ boardId }: swimlanesProps) => {
     setDraggingTask(null)
   }
 
+  const renderingTasks = filteredTasks || tasks
+
   return (
     <div id="swimlanes-container" onDragOver={handleDragOver}>
       {values.taskStatus.map((status, index) => (
@@ -76,19 +78,20 @@ export const Swimlines = ({ boardId }: swimlanesProps) => {
             onDragOver={handleDragOver}
             onDrop={(e) => handleDrop(e, status as TaskStatusTypes)}
           >
-            {tasks[status as TaskStatusTypes]?.map((task, taskIndex) => (
-              <TaskView
-                key={`${task.id}-${taskIndex}`}
-                task={task}
-                taskIndex={taskIndex}
-                status={status}
-                draggingTask={draggingTask}
-                onDragStart={onDragStart}
-                handleDragEnd={handleDragEnd}
-                setDropIndicatorColor={setDropIndicatorColor}
-                removeDropIndicatorColor={removeDropIndicatorColor}
-              />
-            ))}
+            {renderingTasks[status as TaskStatusTypes]?.map(
+              (task, taskIndex) => (
+                <TaskView
+                  key={`${task.id}-${taskIndex}`}
+                  task={task}
+                  status={status}
+                  draggingTask={draggingTask}
+                  onDragStart={onDragStart}
+                  handleDragEnd={handleDragEnd}
+                  setDropIndicatorColor={setDropIndicatorColor}
+                  removeDropIndicatorColor={removeDropIndicatorColor}
+                />
+              )
+            )}
 
             <div id="task-bottom-space" />
           </div>

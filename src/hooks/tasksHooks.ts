@@ -1,6 +1,8 @@
 import { useEffect, useState, useMemo } from 'react'
 import { Task, TaskData, TaskStatusTypes } from '../types/dataTypes'
 import storedTasks from '../assets/data/tasks.json'
+import { taskStringFields } from '../common/values'
+import { useLayout } from './layoutHooks'
 
 const initialData = {
   'board-id': '',
@@ -12,31 +14,37 @@ const initialData = {
 }
 
 export const useFetchTasks = (boardId: string) => {
+  const { searchQuery } = useLayout()
+
   const [taskData, setTaskData] = useState<TaskData>(() => {
     const storedTasks = localStorage.getItem(`tasks_${boardId}`)
     return storedTasks ? JSON.parse(storedTasks) : initialData
   })
 
   useEffect(() => {
+    const casheData = (data: TaskData) => {
+      try {
+        localStorage.setItem(`tasks_${boardId}`, JSON.stringify(data))
+        setTaskData(data)
+      } catch (error) {
+        console.error('Error loading tasks:', error)
+      }
+    }
+
     const loadTasks = () => {
       if (boardId !== storedTasks['board-id']) {
-        localStorage.setItem(`tasks_${boardId}`, JSON.stringify(initialData))
-        setTaskData(initialData)
+        casheData(initialData)
         return
       }
       if (!taskData['board-id'].length) {
-        try {
-          localStorage.setItem(`tasks_${boardId}`, JSON.stringify(storedTasks))
-          setTaskData(storedTasks)
-        } catch (error) {
-          console.error('Error loading tasks:', error)
-        }
+        casheData(storedTasks)
       }
     }
 
     loadTasks()
   }, [boardId, taskData])
 
+  // Update tasks on drag & drop
   const updateTasks = (
     taskId: string,
     droppedId: string,
@@ -110,5 +118,37 @@ export const useFetchTasks = (boardId: string) => {
 
   const tasks = useMemo(() => taskData, [taskData])
 
-  return { tasks, setTaskData, updateTasks }
+  // Task search
+  const filteredTasks = useMemo(() => {
+    if (!searchQuery) return null
+
+    const searchLower = searchQuery.toLowerCase().trim()
+
+    const filterTask = (task: Task) => {
+      const stringFields = taskStringFields as (keyof Task)[]
+
+      const stringMatch = stringFields.some((field) => {
+        const value = task[field]
+        return (
+          typeof value === 'string' && value.toLowerCase().includes(searchLower)
+        )
+      })
+
+      const assigneeMatch = task.assignees.some((assignee) =>
+        assignee.name.toLowerCase().includes(searchLower)
+      )
+
+      return stringMatch || assigneeMatch
+    }
+
+    return {
+      ...taskData,
+      'to-do': taskData['to-do'].filter(filterTask),
+      'in-progress': taskData['in-progress'].filter(filterTask),
+      approved: taskData['approved'].filter(filterTask),
+      reject: taskData['reject'].filter(filterTask),
+    }
+  }, [taskData, searchQuery])
+
+  return { tasks, filteredTasks, setTaskData, updateTasks }
 }
