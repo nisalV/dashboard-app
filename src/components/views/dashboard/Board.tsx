@@ -49,7 +49,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
 }
 
-export const BoardView = () => {
+const Board = () => {
   const { boardId } = useParams()
   const { board } = useFetchBoard(boardId || '')
 
@@ -123,3 +123,5 @@ export const BoardView = () => {
     </>
   )
 }
+
+export default Board

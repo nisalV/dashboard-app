@@ -1,4 +1,4 @@
-# Board App - React + TypeScript
+# Boardli - Task Management Frontend
 
 App is available at: https://boardli.netlify.app
 
