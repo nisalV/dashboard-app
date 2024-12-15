@@ -34,7 +34,7 @@ export const useFetchBoards = () => {
 
 export const useFetchBoard = (boardId: string) => {
   const [boardData, setBoardData] = useState<Board | null>(() => {
-    const storedTasks = localStorage.getItem('board')
+    const storedTasks = localStorage.getItem(`board_${boardId}`)
     return storedTasks ? JSON.parse(storedTasks) : null
   })
 
@@ -47,8 +47,14 @@ export const useFetchBoard = (boardId: string) => {
           const boardAvailable = storedBoards.boards?.find(
             (item) => item.id === boardId
           )
-          if (!boardAvailable) return
-          localStorage.setItem('board', JSON.stringify(boardAvailable))
+          if (!boardAvailable) {
+            setBoardData(null)
+            return
+          }
+          localStorage.setItem(
+            `board_${boardId}`,
+            JSON.stringify(boardAvailable)
+          )
           setBoardData(boardAvailable)
         } catch (error) {
           console.error('Error loading board:', error)
