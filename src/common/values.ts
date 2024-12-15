@@ -80,3 +80,11 @@ export const CategoryColors = {
   other: colors.neutral4,
   interface: colors.neutral3,
 }
+
+export const taskStringFields = [
+  'title',
+  'category',
+  'status',
+  'priority',
+  'notification',
+]

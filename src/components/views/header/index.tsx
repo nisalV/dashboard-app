@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   colors,
   logo,
@@ -10,7 +9,7 @@ import {
 import { ButtonBase, ButtonIcon, ButtonImageRound } from '../../core/button'
 import { Input } from '../../core/input'
 import profileImage from '../../../assets/images/user.png'
-import { useWindowDimensions } from '../../../hooks/layoutHooks'
+import { useLayout, useWindowDimensions } from '../../../hooks/layoutHooks'
 import { TextSizes } from '../../../types/dataTypes'
 import { Image } from '../../core/image'
 import './headerStyles.css'
@@ -54,13 +53,14 @@ const styles: Record<string, React.CSSProperties> = {
 }
 
 export const Header = () => {
+  const { searchQuery, setSearchQuery } = useLayout()
   const { windowWidth, isTabSizeLarge } = useWindowDimensions()
 
-  const [searchText, setSearchText] = useState<string>('')
-
-  const onSubmit = () => {
-    if (searchText.trim()) {
-      setSearchText('')
+  const setQuery = (query: string) => {
+    if (!query) {
+      setSearchQuery(null)
+    } else {
+      setSearchQuery(query)
     }
   }
 
@@ -98,12 +98,11 @@ export const Header = () => {
         />
       )}
       <Input
-        value={searchText}
+        value={searchQuery || ''}
         maxLength={values.inputMaxLength.search}
         placeholder="Search tasks ..."
         style={styles.input}
-        onChange={setSearchText}
-        onSubmit={onSubmit}
+        onChange={setQuery}
       />
       <ButtonIcon
         icon="Settings"

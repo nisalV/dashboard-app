@@ -122,14 +122,12 @@
 
 .overlay {
   position: absolute;
-  width: 100%;
+  width: calc(100% + 28px);
   height: 100%;
   z-index: 10;
-  background-color: trnsparent;
-  opacity: 0.1;
-  left: 0;
+  background-color: transparent;
+  left: -14px;
   top: 0;
-  border-radius: 12px;
 }
 
 .without-image-spacer {
