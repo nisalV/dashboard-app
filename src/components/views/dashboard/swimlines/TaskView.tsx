@@ -110,8 +110,8 @@ export const TaskView = ({
     },
     task['report-count'] && {
       icon: { name: 'Info', width: 17, height: 17, fill: colors.task2 },
-      text: `${task['report-count']}`,
-      color: colors.neutral4,
+      text: `${task['report-count']} Reports`,
+      color: colors.task2,
     },
     task['due-date'] && {
       icon: { name: 'Calendar', width: 16, height: 16, fill: colors.neutral4 },
