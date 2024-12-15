@@ -1,0 +1,21 @@
+#page-container {
+  width: 100%;
+  height: calc(100vh - 81px);
+  overflow: hidden;
+}
+
+#float-button-container {
+  position: absolute;
+  display: none;
+  bottom: -48px;
+  right: 40px;
+  border-radius: 38px;
+  z-index: 6;
+}
+
+@media (max-width: 1250px) {
+  #float-button-container {
+    display: block;
+    bottom: 40px;
+  }
+}

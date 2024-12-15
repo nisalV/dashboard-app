@@ -1,6 +1,6 @@
+import { Pages } from './components/pages'
 import { Header } from './components/views/header'
 import { LayoutProvider } from './contexts/layoutContext'
-import { Dashboard } from './components/pages/dashboard'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <div id="app-container">
         <Header />
         <div id="content-container">
-          <Dashboard />
+          <Pages />
         </div>
       </div>
     </LayoutProvider>

@@ -2,6 +2,7 @@ import { TextSizes, User } from '../../../types/dataTypes'
 import { colors } from '../../../common/values'
 import { ButtonBase, ButtonImageRound } from '../../core/button'
 import fallbackTeam from '../../../assets/images/fallback-team.svg'
+import './dashboardViewStyles.css'
 
 const styles: Record<string, React.CSSProperties> = {
   users: {
